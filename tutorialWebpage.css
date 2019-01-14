@@ -1,3 +1,21 @@
+html *
+{
+    font-family: 'Oswald', sans-serif !important;
+}
+
+html, body {
+    position: ;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+body {
+    background-image: url("../tutorialWebpageProject/assets/photo-1541356665065-22676f35dd40.jpg");
+   
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -7,22 +25,203 @@ ul {
     overflow: hidden;
     width: 300px;
     float: right;
-    text-align: center;
+    z-index: 2;
     
   }
 
 li {
-    float: left;
+    float: right;
 }
 
 li a {
     display: inline-block ;
-    padding: 20px 16px;
+    padding: 15px 13px;
+    color: black;
     text-decoration: none;
-    color: rgb(63, 243, 63);
-    
+    font-weight: bold;
 }
 
 li a:hover {
     background-color: forestgreen;
 }
+
+div {
+    width: 100px;
+    height: 50px;
+    background-color: forestgreen;
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+    animation: mymove 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+  }
+
+  #functions {
+    animation-timing-function: linear;
+    z-index: 4;
+    }
+
+    #functions a {
+        color: black;
+        text-decoration: none;
+    }
+
+  #objects {
+    animation-timing-function: ease;
+    z-index: 4;
+    }
+
+    #objects a {
+        color: black;
+        text-decoration: none;
+    }
+
+  #arrays {
+    animation-timing-function: ease-in;
+    z-index: 4;
+    }
+
+    #arrays a {
+        color: black;
+        text-decoration: none;
+    }
+
+  #forloops {
+    animation-timing-function: ease-out;
+    z-index: 4;
+    }
+
+    #forloops a {
+        color: black;
+        text-decoration: none;
+    }
+  #conditionals {
+    animation-timing-function: ease-in-out;
+    z-index: 4;
+    }
+
+    #conditionals a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #functions a:hover {
+        background-color: aqua;
+    }
+
+    #objects a:hover {
+        background-color: aqua;
+    }
+
+    #arrays a:hover {
+        background-color: aqua;
+    }
+
+    #forloops a:hover {
+        background-color: aqua;
+    }
+
+    #conditionals a:hover {
+        background-color: aqua;
+    }
+
+header {
+    background-color: lime;
+    width: 500px;
+    height: 75px;
+    position: relative;
+    left: 10em;
+    top: -2em;
+}
+
+ #chapters {
+     margin-top: 0em;
+     margin-left: 30px;
+     margin-bottom: 0em;
+ }
+
+    #chapone {
+        background-color: teal;
+        width: 1000px;
+        height: 550px;
+        padding: 2px 15px 2px 15px ;
+        position: relative; 
+        }
+
+    #chaptwo {
+        background-color: rgb(92, 54, 110);
+        width: 575px;
+        height: 750px;
+        padding: 2px 15px 2px 15px ;
+        position: relative;
+        left: 5em
+    }
+
+    #chapthree {
+        background-color: olivedrab;
+        width: 705px;
+        height: 400px;
+        padding: 2px 15px 2px 15px ;
+        position: relative;
+        top: -5em;
+    }
+
+    #chapfour {
+        background-color: gold;
+        width: 325px;
+        height: 600px;
+        padding: 2px 15px 2px 15px ;
+        position: relative;
+        left: 52em;
+        top: -45em;
+    }
+
+    #chapfive {
+        background-color: lightseagreen;
+        width: 755px;
+        height: 900px;
+        padding: 2px 15px 2px 15px ;
+        position: relative;
+        left: 16em;
+        top: -45em;
+        padding-bottom: -1000em;
+    }
+
+    article {
+        width: 450px; 
+        height: 550px;
+        position: absolute;
+        top: 34em;
+        left: 50em;
+        z-index: 2;
+        background-color: wheat;
+        
+     }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+ header {
+    margin-top: -20em;
+    text-align: center;
+ }
+
+ footer { 
+    position: relative;
+    top: -60em;
+    background-color: forestgreen;
+    width: 200px;
+    height: 160px;
+    padding: 2px 15px 3px 15px ;
+    margin-bottom: 0px;
+ }
+
+   @keyframes mymove {
+    from {left: 0%;}
+    to {left: 90%;}
+   }
+
+

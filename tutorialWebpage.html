@@ -1,60 +1,210 @@
+<!-- Structure:
+Webpage must contain the following elements:
+<header> X
+<nav> X
+<section> X
+<a> X
+<footer> X
+<article> X
+<sidebar> X
+Must make use of at least one CSS pseudo-class ( :hover for example) X
+Must have seperate CSS and HTML files connected through a <link> tag X
+Links in <nav> need to be able to direct users to the matching topic sections X
+Must have body content informing the user about topics listed below X
+Must make use of at least one AnimateCSS animation X
+Must have at least 3 educational programming links on the site - these links should open in a new tab 1
+
+	Content:
+You must include and describe at least 3 of the following 5 concepts within your webpage:
+Functions X
+Objects X
+Arrays X
+For Loops X
+Conditionals X -->
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tutorial Webpage</title>
     <link rel="stylesheet" ref="text/css" href="tutorialWebpage.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <body background = "assets/photo-1541356665065-22676f35dd40.jpg">
 </head>
-    <div>
-        <nav>
+<div>
+    <nav>
         <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">News</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">About</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
         </ul>
-        </nav>
-    </div>
-
+    </nav>
+</div>
+<br>
 <br>
 
-<body>    
-<header>
+    <div id="functions"><a href="#chapone">Functions</a></div>
+    <div id="objects"><a href="#chaptwo">Objects</a></div>
+    <div id="arrays"><a href="#chapthree">Arrays</a></div>
+    <div id="forloops"><a href="#chapfour">For Loops</a></div>
+    <div id="conditionals"><a href="#chapfive">Conditionals</a></div>
+
+
+<body>
+
+    <header>
     <h1>Javascript Week One Fundamentals</h1>
-</header>
+    </header>
 
-<section>
-    <h2>Functions</h2>
-    <p>Cake oat cake cookie. Muffin jelly beans chocolate cake. Cookie powder sweet roll marshmallow tootsie roll. Gummi bears jelly jujubes bonbon gummies fruitcake. Jelly beans chocolate bar bonbon fruitcake. Cupcake jelly-o chocolate cake liquorice jelly beans topping muffin sweet roll. Chocolate cake gingerbread gummi bears cookie sweet. Sweet roll gummi bears powder brownie chocolate cake croissant caramels donut. Bear claw sweet roll sweet roll biscuit gummi bears</p>
-</section>
+    <section id="chapters">
+        
+        <section id="chapone">
+            <h3> <center>Functions</center> </h3>
+            <p>A place where you can store a chunk of code when <i>called</i> or 'invoked.' Functions are convenient because they can be reused for different values as many times as needed.<br>
+            <b>Syntax</b>: A JavaScript function is <i>declared</i> with the function keyword, followed by a name, followed by parentheses ( ).
+            Function names can contain letters, digits, underscores, and dollar signs (same rules as variables). 
+            The parentheses may include parameter names separated by commas: (parameter1, parameter2, ...) 
+            The code to be executed, by the function, is placed inside curly brackets: { } <br>
+            <b>Parameters:</b>
+            Function parameters are listed inside the parentheses ( ) in the function definition.
+            Function arguments are the values received by the function when it is invoked.
+            Inside the function, the arguments (the parameters) behave as local variables. <br>
+            <b>Expressions:</b> Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations. You can set a variable equal to a function.<br>
+           <center>var hey = function hi() {
+                console.log('HI') }</center><br>
+            <b>Scope:</b> Variables declared within a JavaScript function, become LOCAL to the function. Local variables can only be accessed from within the function. Global variables can be accessed from outside the function.<br>
+            var x = 12; <br>
+                    function scope( ) {   <-- Declare the function<br>
+                      var x = 33; <br>
+                      console.log(x);<br>
+                    }<br>
+                    scope( ); // you will get 33 (the local variable)  <-- Call the function<br>
+                    console.log(x); // you will get 12 (the global variable) <br>
+                <b>Here's a great resource:</b> <a href="https://www.w3schools.com/js/js_functions.asp" target="blank">W3 Schools</a>
+            </p>
+        </section>
+        
+        <section id="chaptwo">
+            <h3>Objects</h3>
+            <p>
+                    All javascript values, except primitives, are objects. Javascript has five types of primitive data: string, number, boolean (true or false), null, undefined. Primitive values are hardcoded and therefore cannot be changed. Objects are variables, but can contain many values. The values are writen like <i>name: value pairs.</i> A javascript object is a collection of <i>named values</i> <br>
+                <center>let person = {firstName: "John", lastName: "Doe", age: 55, eyeColor: "blue"};</center><br>
+                <b>Properties:</b> The named values in objects are called properties and methods. Properties are the second value in the object pairs from the example above. Methods are pre-built functions that manipulate data for us. Unassigned properties of an object will return undefined and not null or as an error.<br>
+                <b>Literals:</b> The easiest way to create an object is with a literal. In a literal, you both define and create an object in one statement. Our example from above illustrates the syntax. <br>
+                <b>Dot and Bracket Notation:</b> The easiest and most common way to refer to properties is dot notation. You can access properties on an object by specifying the name of the object, followed by a dot (period) followed by the property name. This is the syntax: <i>objectName.propertyName;</i><br>
+                In bracket notation, we can access the object properties like this: objectName [ "propertyName" ]; There are fewer limitations with bracket notation because our prperty identifiers can include any characters, as well as variables. They only have to be a string. In the example below, bracket notation is used to pass in variables:<br>
+                let obj = { cat: 'meow', dog: 'woof' }; <br>
+                  let dog = 'cat';<br>
+                  let sound = obj[dog];<br>
+                  console.log(sound); // meow <br>
+                <b>Here's some great resources:</b> <a href="https://www.w3schools.com/js/js_object_definition.asp" target="blank">W3 Schools</a>, <a href="https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781" target="blank"> Codeburst</a>
+            </p>
+        </section>
 
-<section>
-    <h2>Objects</h2>
-    <p>Cake oat cake cookie. Muffin jelly beans chocolate cake. Cookie powder sweet roll marshmallow tootsie roll. Gummi bears jelly jujubes bonbon gummies fruitcake. Jelly beans chocolate bar bonbon fruitcake. Cupcake jelly-o chocolate cake liquorice jelly beans topping muffin sweet roll. Chocolate cake gingerbread gummi bears cookie sweet. Sweet roll gummi bears powder brownie chocolate cake croissant caramels donut. Bear claw sweet roll sweet roll biscuit gummi bears</p>
-</section>
+        <article>
+            <h3>Learning Javascript is HARD</h3>
+            <p>"Here's the problem -- you're in what I like to call the "Hand Holding Honeymoon" phase. Though you may feel like the end is around the corner, you're only a fraction of the way there. This is just the beginning..."</p>
+            <a href="https://www.thinkful.com/blog/why-learning-to-code-is-so-damn-hard/" target = "blank">Click here to see what happens next!</a>
+            <br>
+            <img src="assets/despair.png" width="470px" height="420x">
+            
+        </article>
 
-<section>
-    <h2>Arrays</h2>
-    <p>Cake oat cake cookie. Muffin jelly beans chocolate cake. Cookie powder sweet roll marshmallow tootsie roll. Gummi bears jelly jujubes bonbon gummies fruitcake. Jelly beans chocolate bar bonbon fruitcake. Cupcake jelly-o chocolate cake liquorice jelly beans topping muffin sweet roll. Chocolate cake gingerbread gummi bears cookie sweet. Sweet roll gummi bears powder brownie chocolate cake croissant caramels donut. Bear claw sweet roll sweet roll biscuit gummi bears</p>
-</section>
+        <section id="chapthree">
+            <h3>Arrays</h3>
+            <p>
+                Arrays are containers that hold lists of items. To write an array, first declare the name and then list the items inside square brackets, separated by commas.<br>
+                let food = ['Pecan pie', 'Shrimp', 'Quesadilla', 'Cheesecake', 'Hotdog'];<br>
+                 for (f in food) { <br>
+                console.log(food[f]) } <br> 
+                You can access an element of an array by referring to the index number. The index starts at [0]. In an array there are a number of ways to add new elements, replace elements, and and take elements away.<br>
+                food.push('Pizza');  //pushes a new string to the array <br>
+                food.splice(1, 1, 'Bananas') // in this example we look at index of 1, ask how many you want to cut? (In this case 1), and what you want to insert? ("Bananas") <br>
+                console.log(food); // [ 'Pecan pie', 'Bananas', 'Quesadilla', 'Cheesecake', 'Hotdog' ] <br>
+                food.pop(); // remove item from the end<br>
+                <b>Further reading:</b> <a href="https://javascript.info/array" target="blank">JavaScript.Info</a>
+                
+            </p>
+        </section>
 
-<section>
-    <h2>For Loops</h2>
-    <p>Cake oat cake cookie. Muffin jelly beans chocolate cake. Cookie powder sweet roll marshmallow tootsie roll. Gummi bears jelly jujubes bonbon gummies fruitcake. Jelly beans chocolate bar bonbon fruitcake. Cupcake jelly-o chocolate cake liquorice jelly beans topping muffin sweet roll. Chocolate cake gingerbread gummi bears cookie sweet. Sweet roll gummi bears powder brownie chocolate cake croissant caramels donut. Bear claw sweet roll sweet roll biscuit gummi bears</p>
-</section>
+        <section id="chapfour">
+            <h3>For Loops</h3>
+            <p>
+            For loops can run the same block of code over and over again, each time with a different value. They consist of three statments: Statement 1 is executed (one time) before the execution of the code block. Statement 2 defines the condition for executing the code block. Statement 3 is executed (every time) after the code block has been executed.<br>
+            
+    <center> for ( var i = 1 /*variable/index section*/ ; i <= 10 /*conditional section*/ ;i++ /*increment section*/ ) { <br>
+    console.log("Number:", i); } </center> <br>
+            You can initiate many values in statement one: 
+            for (i = 0, len = cars.length, text = ""; i < len; i++) { text += cars[i] + "< xr >"; }<br>
+            And the statements can be optional if you declare your variables elsewhere: <br>
+            var i = 0;<br> var len = cars.length; <br>
+             for (; i < len; ) { < xr >
+              text += cars[i] + "< xr >";
+              i++; }
+            </p>
+        </section>
 
-<section>
-    <h2>Conditionals</h2>
-    <p>Cake oat cake cookie. Muffin jelly beans chocolate cake. Cookie powder sweet roll marshmallow tootsie roll. Gummi bears jelly jujubes bonbon gummies fruitcake. Jelly beans chocolate bar bonbon fruitcake. Cupcake jelly-o chocolate cake liquorice jelly beans topping muffin sweet roll. Chocolate cake gingerbread gummi bears cookie sweet. Sweet roll gummi bears powder brownie chocolate cake croissant caramels donut. Bear claw sweet roll sweet roll biscuit gummi bears</p>
-</section>
-
-    <footer>
-        <p>Copyright © 2019 iJams Media</p>
-        <a href= "Say Hi.html">Say Hi</a>
-        <a href="About.html">Learn More</a>
-        <a href= "Rules.html">Boring rules and stuff.</a>
-    </footer>
+        <section id="chapfive">
+            <h3>Conditionals</h3>
+            <p>
+            You can use conditional statements in your code to perform different actions based on different decisions.
+            In JavaScript we have the following conditional statements:<br>
+                    
+               <center> <b>If:</b> Use if to specify a block of code to be executed, if a specified condition is true<br>
+                if (condition) {
+                    //  block of code to be executed if the condition is true<br>
+                 } <br>
+                <b>Else:</b> Use else to specify a block of code to be executed, if the same condition is false<br>
+                if (condition) {<br>
+                    //  block of code to be executed if the condition is true<br>
+                  } else { <br>
+                    //  block of code to be executed if the condition is false<br>
+                  }<br>
+                <b>Else If:</b> Use else if to specify a new condition to test, if the first condition is false<br>
+                if (condition1) {<br>
+                    //  block of code to be executed if condition1 is true<br>
+                  } else if (condition2) {<br>
+                    //  block of code to be executed if the condition1 is false and condition2 is true<br>
+                  } else {<br>
+                    //  block of code to be executed if the condition1 is false and condition2 is false<br>
+                  }<br>
+                <b>Switch:</b> Use switch to specify many alternative blocks of code to be executed. The switch expression is evaluated once.
+                The value of the expression is compared with the values of each case.
+                If there is a match, the associated block of code is executed.<br>
+                switch (dessert) {  <br>
+    case 'Pie':<br>
+    console.log('Pie pie me oh my');<br>
+    break;<br>
+    case 'Cake':<br>
+    console.log('Cake is great');<br>
+    break;<br>
+    case 'Ice cream':<br>
+    console.log('I scream for ice cream');<br>
+    break;<br>
+    default:<br>
+    console.log('Not on the menu');<br>
+            
+            </center>
+            </p>
+        </section>
+    </section>
+    
 </body>
+
+
+<footer>
+    <p>Copyright © 2019 iJams Media</p>
+   
+    <a href="">About</a> <br>
+    <a href="About.html">Contact</a> <br>
+     <a href="Rules.html">News</a><br>
+     <a href="">Home</a>
+
+</footer>
+
 </html>
