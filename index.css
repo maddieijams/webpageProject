@@ -5,7 +5,7 @@ html *
 
 
 body {
-    background-image: url("../tutorialWebpageProject/assets/photo-1541356665065-22676f35dd40.jpg");
+    background-image: url("../tutorialWebpageProject/assets/photo-1541356665065-22676f35dd40.jpg") !important;
    
 }
 
