@@ -3,13 +3,6 @@ html *
     font-family: 'Oswald', sans-serif !important;
 }
 
-html, body {
-    
-    top: 0;
-    bottom:0;
-    left:0;
-    right:0;
-}
 
 body {
     background-image: url("../tutorialWebpageProject/assets/photo-1541356665065-22676f35dd40.jpg");
