@@ -5,13 +5,13 @@ html *
 
 
 body {
-    background-image: url("../tutorialWebpageProject/assets/photo-1541356665065-22676f35dd40.jpg") !important;
+    background-image: url("assets/photo-1541356665065-22676f35dd40.jpg") !important;
    
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0; 
     padding: 0;
     background-color: aqua;
     height: 55px;
